@@ -1,6 +1,6 @@
 # Unified Evaluation Report
 
-- Generated at: `2026-03-22T09:44:28.971794+00:00`
+- Generated at: `2026-03-22T14:07:56.005765+00:00`
 - Eval split: `artifacts/raw/hotpotqa/hotpot_dev_distractor_v1.json`
 - Eval limit: `5`
 - Benchmark rounds: `1`
@@ -20,15 +20,15 @@
 - Case count: `7`
 - Pass rate: `1.0000`
 - Fast-path hit rate: `0.5714`
-- Average total latency: `0.0218s`
+- Average total latency: `0.0260s`
 
 ## Fast Path Benefit
 
 - Fast-path cases: `4`
 - Slow-path cases: `3`
-- Fast-path avg latency: `0.0002s`
-- Slow-path avg latency: `0.0505s`
-- Slow/Fast speedup ratio: `224.30x`
+- Fast-path avg latency: `0.0004s`
+- Slow-path avg latency: `0.0600s`
+- Slow/Fast speedup ratio: `141.25x`
 
 ## Bucket Summary
 
@@ -38,7 +38,7 @@
 - Pass rate: `1.0000`
 - Grounded rate: `1.0000`
 - Fast-path hit rate: `1.0000`
-- Avg total latency: `0.0001s`
+- Avg total latency: `0.0002s`
 
 ### comparison_nationality
 
@@ -46,7 +46,7 @@
 - Pass rate: `1.0000`
 - Grounded rate: `1.0000`
 - Fast-path hit rate: `1.0000`
-- Avg total latency: `0.0004s`
+- Avg total latency: `0.0006s`
 
 ### concept_experiment
 
@@ -54,7 +54,7 @@
 - Pass rate: `1.0000`
 - Grounded rate: `1.0000`
 - Fast-path hit rate: `0.0000`
-- Avg total latency: `0.0754s`
+- Avg total latency: `0.0895s`
 
 ### entity_nationality
 
@@ -62,7 +62,7 @@
 - Pass rate: `1.0000`
 - Grounded rate: `1.0000`
 - Fast-path hit rate: `1.0000`
-- Avg total latency: `0.0001s`
+- Avg total latency: `0.0003s`
 
 ### entity_profession
 
@@ -70,7 +70,7 @@
 - Pass rate: `1.0000`
 - Grounded rate: `1.0000`
 - Fast-path hit rate: `1.0000`
-- Avg total latency: `0.0003s`
+- Avg total latency: `0.0006s`
 
 ### guardrail_birthplace
 
@@ -78,19 +78,19 @@
 - Pass rate: `1.0000`
 - Grounded rate: `1.0000`
 - Fast-path hit rate: `0.0000`
-- Avg total latency: `0.0005s`
+- Avg total latency: `0.0011s`
 
 ## Latency Summary
 
 - retrieval_seconds: mean=`0.0000s`, p50=`0.0000s`, p95=`0.0000s`, max=`0.0000s`
 - rerank_seconds: mean=`0.0001s`, p50=`0.0000s`, p95=`0.0004s`, max=`0.0004s`
-- generation_seconds: mean=`0.0001s`, p50=`0.0000s`, p95=`0.0003s`, max=`0.0003s`
-- total_seconds: mean=`0.0003s`, p50=`0.0001s`, p95=`0.0007s`, max=`0.0007s`
+- generation_seconds: mean=`0.0001s`, p50=`0.0000s`, p95=`0.0004s`, max=`0.0004s`
+- total_seconds: mean=`0.0003s`, p50=`0.0001s`, p95=`0.0008s`, max=`0.0008s`
 
 ## Generator Modes
 
 - fast_path: count=`4`, mean=`0.0001s`, p50=`0.0001s`, p95=`0.0001s`
-- offline: count=`3`, mean=`0.0005s`, p50=`0.0007s`, p95=`0.0007s`
+- offline: count=`3`, mean=`0.0006s`, p50=`0.0007s`, p95=`0.0008s`
 
 ## Notes
 

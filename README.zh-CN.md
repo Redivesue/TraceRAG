@@ -19,6 +19,32 @@
 - 基于证据的回答生成
 - 评估、traceability 与报告输出
 
+## 界面快照
+
+搜索前的 Streamlit 首页：
+
+![Streamlit 首页快照](./assets/screenshots/streamlit-home.png)
+
+一次 fast-path 查询结果示例，包含回答、citation、timings 和可追踪证据：
+
+![Streamlit fast-path 结果快照](./assets/screenshots/streamlit-result-fastpath.png)
+
+## 验证快照
+
+在截图前，本地实际运行了下面两条验证命令：
+
+```bash
+python3 -m src.evaluation.regression
+python3 -m src.evaluation.report --eval-limit 5 --benchmark-rounds 1
+```
+
+这次本地运行得到的结果为：
+
+- 回归验证：`passed=7/7`
+- 报告快照：`Recall@5=1.0000`
+- 报告快照：`Pass Rate=1.0000`
+- 报告快照：`Fast-Path Hit Rate=0.5714`
+
 ## 项目简介
 
 这个项目不是一个泛化聊天机器人 demo，而是一个更偏 search QA 的原型系统。它希望回答事实类问题时，不只返回答案，还尽量返回：

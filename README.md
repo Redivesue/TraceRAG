@@ -19,6 +19,32 @@ It should be read as a hands-on systems exercise rather than a polished producti
 - citation-grounded generation
 - evaluation, tracing, and reporting
 
+## UI Snapshot
+
+Homepage before search:
+
+![Streamlit home snapshot](./assets/screenshots/streamlit-home.png)
+
+Example fast-path result with citations, timings, and traceable evidence:
+
+![Streamlit fast-path result snapshot](./assets/screenshots/streamlit-result-fastpath.png)
+
+## Validation Snapshot
+
+The following two commands were run locally before capturing the screenshots:
+
+```bash
+python3 -m src.evaluation.regression
+python3 -m src.evaluation.report --eval-limit 5 --benchmark-rounds 1
+```
+
+Observed results from the latest local run:
+
+- regression suite: `passed=7/7`
+- report snapshot: `Recall@5=1.0000`
+- report snapshot: `Pass Rate=1.0000`
+- report snapshot: `Fast-Path Hit Rate=0.5714`
+
 ## Why This Project Exists
 
 This project is not a generic chatbot demo. It is a production-style search QA prototype built to answer factual questions with explicit evidence, measurable behavior, and observable execution paths.
