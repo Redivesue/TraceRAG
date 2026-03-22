@@ -1,0 +1,34 @@
+.env
+__pycache__/
+*.pyc
+
+# Local OS/editor noise
+.DS_Store
+.idea/
+
+# Python build/test caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets and local env overrides
+.env.local
+
+# Large generated artifacts and source datasets
+artifacts/raw/
+artifacts/chunks/
+artifacts/indexes/
+
+# Keep lightweight reproducibility outputs
+!artifacts/
+!artifacts/reports/
+!artifacts/reports/latest_report.json
+!artifacts/reports/latest_report.md
+
+# Binary/index/cache formats that should not be versioned
+*.faiss
+*.index
+*.npy
+*.pkl
+*.pkl.gz
+*.old

@@ -1,0 +1,312 @@
+{
+  "generated_at": "2026-03-22T09:44:28.971794+00:00",
+  "config": {
+    "eval_path": "artifacts/raw/hotpotqa/hotpot_dev_distractor_v1.json",
+    "eval_limit": 5,
+    "benchmark_rounds": 1,
+    "benchmark_warmup": false,
+    "regression_case_count": 7,
+    "bucket_counts": {
+      "entity_nationality": 1,
+      "entity_profession": 1,
+      "comparison_nationality": 1,
+      "comparison_age": 1,
+      "concept_experiment": 2,
+      "guardrail_birthplace": 1
+    }
+  },
+  "retrieval": {
+    "evaluated_examples": 5,
+    "recall_at_5": 1.0,
+    "recall_at_10": 1.0,
+    "mrr": 0.7333333333333333,
+    "citation_hit_rate": 1.0,
+    "citation_precision": 0.7,
+    "answer_grounded_rate": 1.0
+  },
+  "regression": {
+    "count": 7,
+    "pass_rate": 1.0,
+    "fast_path_hit_rate": 0.5714285714285714,
+    "bucket_summary": {
+      "comparison_age": {
+        "count": 1,
+        "pass_rate": 1.0,
+        "grounded_rate": 1.0,
+        "fast_path_hit_rate": 1.0,
+        "avg_total_seconds": 0.0001
+      },
+      "comparison_nationality": {
+        "count": 1,
+        "pass_rate": 1.0,
+        "grounded_rate": 1.0,
+        "fast_path_hit_rate": 1.0,
+        "avg_total_seconds": 0.0004
+      },
+      "concept_experiment": {
+        "count": 2,
+        "pass_rate": 1.0,
+        "grounded_rate": 1.0,
+        "fast_path_hit_rate": 0.0,
+        "avg_total_seconds": 0.07544999999999999
+      },
+      "entity_nationality": {
+        "count": 1,
+        "pass_rate": 1.0,
+        "grounded_rate": 1.0,
+        "fast_path_hit_rate": 1.0,
+        "avg_total_seconds": 0.0001
+      },
+      "entity_profession": {
+        "count": 1,
+        "pass_rate": 1.0,
+        "grounded_rate": 1.0,
+        "fast_path_hit_rate": 1.0,
+        "avg_total_seconds": 0.0003
+      },
+      "guardrail_birthplace": {
+        "count": 1,
+        "pass_rate": 1.0,
+        "grounded_rate": 1.0,
+        "fast_path_hit_rate": 0.0,
+        "avg_total_seconds": 0.0005
+      }
+    },
+    "avg_total_seconds": 0.021757142857142857,
+    "fast_path_benefit": {
+      "fast_case_count": 4,
+      "slow_case_count": 3,
+      "fast_avg_total_seconds": 0.000225,
+      "slow_avg_total_seconds": 0.05046666666666667,
+      "speedup_ratio": 224.2962962962963
+    },
+    "cases": [
+      {
+        "name": "fast_nationality",
+        "bucket": "entity_nationality",
+        "query": "What nationality is Scott Derrickson?",
+        "passed": true,
+        "generator_mode": "fast_path",
+        "timings": {
+          "retrieval_seconds": 0.0,
+          "rerank_seconds": 0.0,
+          "generation_seconds": 0.0,
+          "total_seconds": 0.0001
+        },
+        "citation_count": 1,
+        "used_titles": [
+          "Scott Derrickson"
+        ],
+        "reranked_titles": [
+          "Scott Derrickson"
+        ],
+        "missing_expected_substrings": [],
+        "forbidden_substrings_found": [],
+        "mode_ok": true
+      },
+      {
+        "name": "fast_profession",
+        "bucket": "entity_profession",
+        "query": "What is Ed Wood's profession?",
+        "passed": true,
+        "generator_mode": "fast_path",
+        "timings": {
+          "retrieval_seconds": 0.0,
+          "rerank_seconds": 0.0,
+          "generation_seconds": 0.0002,
+          "total_seconds": 0.0003
+        },
+        "citation_count": 1,
+        "used_titles": [
+          "Ed Wood"
+        ],
+        "reranked_titles": [
+          "Ed Wood"
+        ],
+        "missing_expected_substrings": [],
+        "forbidden_substrings_found": [],
+        "mode_ok": true
+      },
+      {
+        "name": "fast_comparison_nationality",
+        "bucket": "comparison_nationality",
+        "query": "Were Scott Derrickson and Ed Wood of the same nationality?",
+        "passed": true,
+        "generator_mode": "fast_path",
+        "timings": {
+          "retrieval_seconds": 0.0,
+          "rerank_seconds": 0.0002,
+          "generation_seconds": 0.0002,
+          "total_seconds": 0.0004,
+          "cache_hit": 1.0
+        },
+        "citation_count": 2,
+        "used_titles": [
+          "Scott Derrickson",
+          "Ed Wood"
+        ],
+        "reranked_titles": [
+          "Scott Derrickson",
+          "Ed Wood"
+        ],
+        "missing_expected_substrings": [],
+        "forbidden_substrings_found": [],
+        "mode_ok": true
+      },
+      {
+        "name": "fast_comparison_age",
+        "bucket": "comparison_age",
+        "query": "Who is older, Scott Derrickson or Ed Wood?",
+        "passed": true,
+        "generator_mode": "fast_path",
+        "timings": {
+          "retrieval_seconds": 0.0,
+          "rerank_seconds": 0.0,
+          "generation_seconds": 0.0001,
+          "total_seconds": 0.0001
+        },
+        "citation_count": 2,
+        "used_titles": [
+          "Scott Derrickson",
+          "Ed Wood"
+        ],
+        "reranked_titles": [
+          "Scott Derrickson",
+          "Ed Wood"
+        ],
+        "missing_expected_substrings": [],
+        "forbidden_substrings_found": [],
+        "mode_ok": true
+      },
+      {
+        "name": "slow_experiment",
+        "bucket": "concept_experiment",
+        "query": "What did the Pound–Rebka experiment test?",
+        "passed": true,
+        "generator_mode": "offline",
+        "timings": {
+          "retrieval_seconds": 0.0854,
+          "rerank_seconds": 0.0005,
+          "generation_seconds": 0.0006,
+          "total_seconds": 0.0865
+        },
+        "citation_count": 2,
+        "used_titles": [
+          "Pound–Rebka experiment",
+          "Robert Pound"
+        ],
+        "reranked_titles": [
+          "Pound–Rebka experiment",
+          "Robert Pound",
+          "Nucifer experiment",
+          "Luria–Delbrück experiment",
+          "Popper's experiment"
+        ],
+        "missing_expected_substrings": [],
+        "forbidden_substrings_found": [],
+        "mode_ok": true
+      },
+      {
+        "name": "slow_purpose",
+        "bucket": "concept_experiment",
+        "query": "What is the purpose of the Nucifer experiment?",
+        "passed": true,
+        "generator_mode": "offline",
+        "timings": {
+          "retrieval_seconds": 0.0634,
+          "rerank_seconds": 0.0004,
+          "generation_seconds": 0.0005,
+          "total_seconds": 0.0644
+        },
+        "citation_count": 2,
+        "used_titles": [
+          "Nucifer experiment",
+          "Wu experiment"
+        ],
+        "reranked_titles": [
+          "Nucifer experiment",
+          "Wu experiment",
+          "Homestake experiment",
+          "Kerplunk experiment",
+          "National Spherical Torus Experiment"
+        ],
+        "missing_expected_substrings": [],
+        "forbidden_substrings_found": [],
+        "mode_ok": true
+      },
+      {
+        "name": "guardrail_birth_city",
+        "bucket": "guardrail_birthplace",
+        "query": "What city was Christopher Nolan born in?",
+        "passed": true,
+        "generator_mode": "offline",
+        "timings": {
+          "retrieval_seconds": 0.0,
+          "rerank_seconds": 0.0,
+          "generation_seconds": 0.0005,
+          "total_seconds": 0.0005
+        },
+        "citation_count": 1,
+        "used_titles": [
+          "Christopher Nolan"
+        ],
+        "reranked_titles": [
+          "Christopher Nolan"
+        ],
+        "missing_expected_substrings": [],
+        "forbidden_substrings_found": [],
+        "mode_ok": true
+      }
+    ]
+  },
+  "benchmark": {
+    "rounds": 1,
+    "warmup": false,
+    "modes": {
+      "fast_path": {
+        "count": 4,
+        "mean_seconds": 7.500000000000001e-05,
+        "p50_seconds": 0.0001,
+        "p95_seconds": 0.0001,
+        "max_seconds": 0.0001
+      },
+      "offline": {
+        "count": 3,
+        "mean_seconds": 0.0005333333333333334,
+        "p50_seconds": 0.0007,
+        "p95_seconds": 0.0007,
+        "max_seconds": 0.0007
+      }
+    },
+    "stages": {
+      "retrieval_seconds": {
+        "count": 7,
+        "mean_seconds": 0.0,
+        "p50_seconds": 0.0,
+        "p95_seconds": 0.0,
+        "max_seconds": 0.0
+      },
+      "rerank_seconds": {
+        "count": 7,
+        "mean_seconds": 0.0001142857142857143,
+        "p50_seconds": 0.0,
+        "p95_seconds": 0.00039999999999999996,
+        "max_seconds": 0.0004
+      },
+      "generation_seconds": {
+        "count": 7,
+        "mean_seconds": 0.00011428571428571428,
+        "p50_seconds": 0.0,
+        "p95_seconds": 0.0003,
+        "max_seconds": 0.0003
+      },
+      "total_seconds": {
+        "count": 7,
+        "mean_seconds": 0.00027142857142857144,
+        "p50_seconds": 0.0001,
+        "p95_seconds": 0.0007000000000000001,
+        "max_seconds": 0.0007
+      }
+    }
+  }
+}
