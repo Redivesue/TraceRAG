@@ -1,8 +1,23 @@
 # Perplexity Lite
 
+[English](./README.md) | [简体中文](./README.zh-CN.md)
+
 > A Perplexity-style search QA system with hybrid retrieval, reranking, and citation-grounded generation.
 
 Supports explainable answers, path tracing, and quantitative evaluation across retrieval quality, grounding quality, and latency.
+
+## Project Positioning
+
+This is a beginner-oriented learning project built to practice a modern retrieval and grounded-generation stack end to end.
+
+It should be read as a hands-on systems exercise rather than a polished production product. The goal was to learn by implementing and connecting core components such as:
+
+- corpus preparation
+- offline indexing
+- sparse and dense retrieval
+- fusion and reranking
+- citation-grounded generation
+- evaluation, tracing, and reporting
 
 ## Why This Project Exists
 
